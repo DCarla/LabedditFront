@@ -29,6 +29,22 @@ export const StyledContainer = styled.div`
     font-style: normal;
     font-weight: 300;
     line-height: normal;
+
+    animation-duration: 4s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+
+    @keyframes slidein {
+      from {
+        margin-left: 80%;
+        width: 100%;
+      }
+
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
   }
   .div1 {
     display: flex;
