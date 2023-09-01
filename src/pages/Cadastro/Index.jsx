@@ -6,7 +6,7 @@ export default function Cadastro() {
       <input />
       <input />
       <input />
-      <spa>Ao continuar</spa>
+      <spa>Você ira continuar</spa>
       <label>
         <input type="checkbox" />
       </label>
