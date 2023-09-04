@@ -10,7 +10,7 @@ Temos no Figma abaixo um design de app mobile first:
 
 ## Front-end
 
--  Layout do Figma  => https://www.figma.com/file/Byakv89sjTqI6NG2NRAAKJ/Projeto-Integrador-Labeddit?node-id=0%3A1&t=haX9j5M0lHbjWnAr-0
+-  Layout do Figma => https://www.figma.com/file/Byakv89sjTqI6NG2NRAAKJ/Projeto-Integrador-Labeddit?node-id=0%3A1&t=haX9j5M0lHbjWnAr-0
 -  Uso do ReactJS
 -  Site deployado
 
