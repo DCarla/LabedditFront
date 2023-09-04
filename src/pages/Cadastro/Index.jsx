@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { StyledHeader } from "./style";
-import { goToHome } from "../../router/cordinator";
+import { goToHomePrincipal } from "../../router/cordinator";
+import Header from "../../components/organism/Header/index";
+
 export default function Cadastro() {
   const navigate = useNavigate();
   return (
@@ -17,7 +19,7 @@ export default function Cadastro() {
         <input id="checkbox" type="checkbox" />
         Eu concordo em receber emails sobre coisas legais no LabedditApelido
       </label>
-      <button onClick={() => goToHome(navigate)} className="button1">
+      <button onClick={() => goToHomePrincipal(navigate)} className="button1">
         Cadastrar
       </button>
     </StyledHeader>
