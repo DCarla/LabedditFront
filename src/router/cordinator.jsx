@@ -6,6 +6,9 @@ export const goToCadastro = (navigate) => {
   navigate("/cadastro");
 };
 
-export const goToHome = (navigate) => {
+export const goToHomePrincipal = (navigate) => {
   navigate("/");
+};
+export const goToHome = (navigate) => {
+  navigate("/home");
 };

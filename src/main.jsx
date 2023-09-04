@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 
 import LoginPage from "./pages/LoginPage/index.jsx";
 import Cadastro from "./pages/Cadastro/Index";
+import HomePrincipal from "./pages/HomePrincipal";
 
 const router = createBrowserRouter([
   {
@@ -16,18 +17,22 @@ const router = createBrowserRouter([
     errorElement: <ErrorElement />,
     children: [
       {
-        path: "",
+        path: "home",
         element: <Home />,
+      },
+      {
+        path: "/cadastro",
+        element: <Cadastro />,
+      },
+      {
+        path: "",
+        element: <HomePrincipal />,
       },
     ],
   },
   {
     path: "/login",
     element: <LoginPage />,
-  },
-  {
-    path: "/cadastro",
-    element: <Cadastro />,
   },
 ]);
 
