@@ -1,4 +1,5 @@
-#Labeddit Full Stack
+
+Labeddit Full Stack
 
 Temos no Figma abaixo um design de app mobile first:
 
