@@ -14,6 +14,10 @@ export const StyledContainer = styled.div`
     display: flex;
     align-items: center;
   }
+
+  .liked {
+    background: red;
+  }
   strong {
     margin: 0 18px 0 18px;
     color: #6f6f6f;

@@ -6,7 +6,10 @@ export default function Home() {
     <StyledContainer>
       <div classeName="wrappe">
         <Post />
-        <Coment />
+        <Post />
+        <Post />
+        <Post />
+        <Post />
       </div>
     </StyledContainer>
   );

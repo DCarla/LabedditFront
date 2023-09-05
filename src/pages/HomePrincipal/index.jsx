@@ -5,7 +5,7 @@ import { StyledContainer } from "./style";
 export default function HomePrincipal() {
   return (
     <StyledContainer>
-      <div classeName="wrappe">
+      <div className="wrappe">
         <ComentPrincipal />
         <Post />
       </div>

@@ -3,6 +3,7 @@ import Logo from "../../../../public/assents/icons/Logo.png";
 import { StyledHeader } from "./styles";
 import { useNavigate } from "react-router-dom";
 import { goToLogin } from "../../../router/cordinator";
+import { useState } from "react";
 
 export default function Header() {
   const navigate = useNavigate();
