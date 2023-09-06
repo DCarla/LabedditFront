@@ -38,7 +38,7 @@ export default function ActionButtonPost({
         <StyledImg
           className="setaBaixo"
           src={seta}
-          alt="Seta transparente com borda cinza apontando para baixo"
+          alt="Seta Transparente com borda cinza apontando para baixo"
         />
       </button>
       <button onClick={handleActivteComment}>
