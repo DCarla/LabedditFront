@@ -8,12 +8,5 @@
 -  Layout do Figma => https://www.figma.com/file/Byakv89sjTqI6NG2NRAAKJ/Projeto-Integrador-Labeddit?node-id=0%3A1&t=haX9j5M0lHbjWnAr-0
 -  Uso do ReactJS
 -  Site deployado
+-  Documentação => 
 
-
-## Back-end
-
-- Endpoints seguindo as boas práticas HTTP
-- Uso do ExpressJS, Typescript e SQLite
-- Cobertura de testes (pelo menos 70% da Business)
-- API deployada
--  Documentação POSTMAN  ===>> colocar
