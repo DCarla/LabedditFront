@@ -120,4 +120,8 @@ export const StyledContainer = styled.div`
     font-weight: 700;
     line-height: normal;
   }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 `;

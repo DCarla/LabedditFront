@@ -35,7 +35,9 @@ export default function Login() {
 
       setIsLoading(false);
       goToHomePrincipal(navigate);
-    } catch (error) {}
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (

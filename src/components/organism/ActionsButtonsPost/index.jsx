@@ -5,12 +5,17 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { goToHome } from "../../../router/cordinator";
 
 export default function ActionButtonPost({
-  isLiked,
-  setIsLiked,
   setIsCommentOpen,
+  likes,
+  dislikes,
+  comments,
+  likeOrDislike,
+  postId,
+  setLikedState,
+  likedState,
 }) {
   const navigate = useNavigate();
-  function handleActivteComment() {
+  function handleActivateComment() {
     if (!/.\/home/.test(location.href)) {
       goToHome(navigate);
     } else {
@@ -20,30 +25,41 @@ export default function ActionButtonPost({
 
   return (
     <StyledContainer>
+      <div className={` transparent-with-border`}>
+        <button
+          onClick={() => {
+            likeOrDislike(postId, true),
+              setLikedState((prev) => (prev === "liked" ? "" : "liked"));
+          }}
+          className="arrow-button"
+        >
+          <img
+            className={`${likedState === "liked" ? "select-liked" : ""}`}
+            src={seta}
+            alt="seta transparente"
+          />
+        </button>
+        <strong>{likes - dislikes || 0}</strong>
+        <button
+          onClick={() => {
+            likeOrDislike(postId, false),
+              setLikedState((prev) => (prev === "disliked" ? "" : "disliked"));
+          }}
+          className="arrow-button"
+        >
+          <StyledImg
+            className={`${likedState === "disliked" ? "select-disliked" : ""}`}
+            src={seta}
+            alt="seta transparente"
+          />
+        </button>
+      </div>
       <button
-        onClick={() => {
-          setIsLiked((prev) => {
-            return !prev;
-          });
-        }}
-        className={`${isLiked ? "liked" : ""}`}
+        onClick={handleActivateComment}
+        className="transparent-with-border"
       >
-        <img
-          src={seta}
-          alt="Seta transparente com borda cinza apontando para cima"
-        />
-
-        <strong>1.2k</strong>
-
-        <StyledImg
-          className="setaBaixo"
-          src={seta}
-          alt="Seta Transparente com borda cinza apontando para baixo"
-        />
-      </button>
-      <button onClick={handleActivteComment}>
-        <img src={coment_Button} alt="Comentario" />
-        <strong>122</strong>
+        <img src={coment_Button} alt="icone de comentar" />
+        <strong>{comments}</strong>
       </button>
     </StyledContainer>
   );

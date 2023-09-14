@@ -4,22 +4,33 @@ import ActionButtonPost from "../ActionsButtonsPost";
 import { StyledContainer } from "./styles";
 import Coment from "../Coment";
 
-export default function Post() {
-  const [isLiked, setIsLiked] = useState(false);
+export default function Post({
+  text,
+  creator,
+  likes,
+  dislikes,
+  comments,
+  likeOrDislike,
+  postId,
+}) {
+  const [likedState, setLikedState] = useState("");
+
   const [isCommentOpen, setIsCommentOpen] = useState(false);
 
   return (
     <>
       <StyledContainer>
-        <SentBy />
-        <p>
-          Porque a maioria dos desenvolvedores usam Linux? ou as empresas de
-          tecnologia usam Linux ?
-        </p>
+        <SentBy creator={creator} />
+        <p>{text}</p>
         <ActionButtonPost
-          isLiked={isLiked}
-          setIsLiked={setIsLiked}
           setIsCommentOpen={setIsCommentOpen}
+          likes={likes}
+          dislikes={dislikes}
+          comments={comments}
+          likeOrDislike={likeOrDislike}
+          postId={postId}
+          likedState={likedState}
+          setLikedState={setLikedState}
         />
       </StyledContainer>
       {isCommentOpen ? <Coment /> : <></>}
