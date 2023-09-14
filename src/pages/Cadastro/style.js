@@ -105,4 +105,8 @@ export const StyledHeader = styled.header`
   #checkbox {
     margin-right: 8px;
   }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
 `;
