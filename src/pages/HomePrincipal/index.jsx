@@ -35,10 +35,22 @@ export default function HomePrincipal() {
     getPosts();
   }, []);
   console.log(posts);
+  const createPost = async (content, e) => {
+    e.preventDefault();
+    try {
+      const headers = { headers: { Authorization: token } };
+      const body = { content: content };
+      await axios.post(`${BASE_URL}posts`, body, headers);
+      getPosts();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <StyledContainer>
       <div className="wrappe">
-        <ComentPrincipal />
+        <ComentPrincipal createPost={createPost} />
         {posts.map((post) => (
           <Post
             text={post.content}
