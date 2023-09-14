@@ -1,20 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledContainer } from "./style";
-import { goToHome } from "../../../router/cordinator";
-import { useNavigate } from "react-router-dom";
 
-export default function ComentPrincipal() {
-  const navigate = useNavigate();
+export default function ComentPrincipal({ createPost }) {
+  const [content, setContent] = useState("");
+
   return (
     <StyledContainer>
-      <div>
-        <input type="text" placeholder="Escreva seu post" />
-      </div>
+      <form onSubmit={(e) => (createPost(content, e), setContent(""))}>
+        <div>
+          <input
+            autoComplete="off"
+            name="post"
+            value={content}
+            onChange={(e) => {
+              setContent(e.target.value);
+            }}
+            type="text"
+            placeholder="Escreva seu post"
+          />
+        </div>
 
-      <button onClick={() => goToHome(navigate)} className="button2">
-        Postar
-      </button>
-
+        <button type="submit" className="button2">
+          Postar
+        </button>
+      </form>
       <hr />
     </StyledContainer>
   );
