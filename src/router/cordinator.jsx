@@ -9,6 +9,6 @@ export const goToCadastro = (navigate) => {
 export const goToHomePrincipal = (navigate) => {
   navigate("/");
 };
-export const goToHome = (navigate) => {
-  navigate("/home");
+export const goToHome = (navigate, id) => {
+  navigate("/home/" + id);
 };

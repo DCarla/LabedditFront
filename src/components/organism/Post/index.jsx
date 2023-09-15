@@ -33,7 +33,6 @@ export default function Post({
           setLikedState={setLikedState}
         />
       </StyledContainer>
-      {isCommentOpen ? <Coment /> : <></>}
     </>
   );
 }

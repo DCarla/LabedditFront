@@ -1,20 +1,32 @@
-import React from "react";
+//comentario
+
+import React, { useState } from "react";
 import { StyledContainer } from "./style";
-import { useNavigate } from "react-router-dom";
+
 import { goToHomePrincipal } from "../../../router/cordinator";
 
-export default function Coment() {
-  const navigate = useNavigate();
-
+export default function Coment({ onSubmit }) {
+  const [content, setContent] = useState("");
   return (
     <StyledContainer>
-      <div>
-        <input type="text" placeholder="Adicionar comentario" />
-      </div>
+      <form onSubmit={(e) => (onSubmit(content, e), setContent(""))}>
+        <div>
+          <input
+            type="text"
+            autoComplete="off"
+            value={content}
+            name="content"
+            onChange={(e) => {
+              setContent(e.target.value);
+            }}
+            placeholder="Adicionar comentario"
+          />
+        </div>
 
-      <button onClick={() => goToHomePrincipal(navigate)} className="button2">
-        Responder
-      </button>
+        <button type="submit" className="button2">
+          Responder
+        </button>
+      </form>
       <hr />
     </StyledContainer>
   );
