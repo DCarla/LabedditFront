@@ -17,9 +17,7 @@ export default function ActionButtonPost({
   const navigate = useNavigate();
   function handleActivateComment() {
     if (!/.\/home/.test(location.href)) {
-      goToHome(navigate);
-    } else {
-      setIsCommentOpen((prev) => !prev);
+      goToHome(navigate, postId);
     }
   }
 
@@ -54,13 +52,15 @@ export default function ActionButtonPost({
           />
         </button>
       </div>
-      <button
-        onClick={handleActivateComment}
-        className="transparent-with-border"
-      >
-        <img src={coment_Button} alt="icone de comentar" />
-        <strong>{comments}</strong>
-      </button>
+      {comments !== undefined && (
+        <button
+          onClick={handleActivateComment}
+          className="transparent-with-border"
+        >
+          <img src={coment_Button} alt="icone de comentar" />
+          <strong>{comments || 0}</strong>
+        </button>
+      )}
     </StyledContainer>
   );
 }

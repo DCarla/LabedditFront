@@ -64,7 +64,7 @@ export const StyledHeader = styled.header`
     line-height: normal;
     padding: 5px;
   }
-  spa {
+  span {
     color: #000;
     font-family: Noto Sans;
     font-size: 14px;
@@ -108,5 +108,6 @@ export const StyledHeader = styled.header`
   form {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
 `;

@@ -34,7 +34,7 @@ export default function HomePrincipal() {
   useEffect(() => {
     getPosts();
   }, []);
-  console.log(posts);
+
   const createPost = async (content, e) => {
     e.preventDefault();
     try {
